@@ -1,11 +1,11 @@
 {
   "version": 2,
-
-  "outputDirectory": "dist",
-  "rewrites": [
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/main.js"
+      "src": "dist/**/*",
+      "use": "@vercel/node"
     }
-  ]
+  ],
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
+  "trailingSlash": true
 }
